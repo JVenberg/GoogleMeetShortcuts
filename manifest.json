@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Google Meet Reactions",
+    "description": "Enable keyboard shortcuts for reactions in Google Meet. Allows MuteDeck to react using custom actions.",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://meet.google.com/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "js": ["contentScript.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}
